@@ -1,0 +1,392 @@
+:root {
+    --color-nav: rgb(216, 219, 226); 
+    --color-nav-opaco: rgba(216, 219, 226, 0.1); 
+    --color-menu: rgb(169, 188, 208);
+    --color-item: rgb(218, 164, 154); 
+    --color-footer: rgb(88, 164, 176);
+    --color-atras: rgb(55, 63, 81); 
+    --color-prueba: rgb(240, 113, 103, 0.7);
+
+    
+    --fuentenav: 'Montserrat Alternates', sans-serif;
+    --fuentetitulo: 'Lora', serif;
+    --fuenteparrafo: 'Athiti', sans-serif;
+   
+
+}
+
+* {
+    box-sizing: border-box;
+    
+}  
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-footer);
+    font-family: var(--fuentenav);
+    
+
+}
+
+body {
+    margin:0;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+/*ESTO VA SI O SIIIII*/
+.flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom: 5%;
+    
+   
+
+}
+
+.flexbox-menu {
+    margin-top: 10px;
+}
+
+/*ESTO RE VAAA*/
+.flexbox-h1 {
+    flex-grow: 1;
+    text-align: center;
+    align-self: center;
+     
+}
+
+
+
+
+ul {
+    display: inline;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+    background-color: var(--color-menu); 
+    
+}
+
+li {
+    
+    display: inline;
+    text-align: center;
+    
+    padding: 10px 0px;
+      
+}
+
+li a {
+    
+    padding: 15px 30px;
+    text-decoration: none;
+            
+}
+    
+.active, li a:hover {
+    background-color: var(--color-atras); 
+    color: var(--color-nav);
+}
+
+.button {
+    transition-duration: 0.5s;
+    /*float: right;*/ 
+}
+
+
+
+
+.flexbox-index {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+    
+}
+
+
+
+#opaco {
+    
+    background-image: linear-gradient(rgb(169, 188, 208),  rgb(216, 219, 226));
+    
+       
+}
+
+.flexbox-item {
+    border-top: 5px var(--color-menu) solid;
+    width: 50%;
+    height: 13rem;
+    text-align: center;
+    
+}
+
+
+div.galeria {
+    display: inline-block;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+  
+  div.container {
+    text-align: center;
+    padding: 10px 10px;
+    margin: 1.5%;
+  }
+
+  .container {
+    position: relative;
+    /* width: 100%; */
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--color-footer);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-row-gap: 50px;
+    /* height: 100vh; */
+    
+   
+} 
+
+.grid-item1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .grid-item2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .grid-item3 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .grid-item4 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .grid-item5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .grid-item6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+.grid-item {
+    /* border: 1px black solid; */
+    /* border-top: 5px black solid; */
+    background-color: var(--color-nav-opaco);
+    height: 13rem;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+   
+
+.grid-item1, .grid-item5 {
+   margin-left: 50%; 
+   
+   
+}
+
+.grid-item3, .grid-item8 {
+    margin-right: 50%;
+    
+}
+
+.color {
+    background-color: var(--color-prueba);
+  }
+
+
+h1 {
+    color: var(--color-atras);
+    font-family: var(--fuentetitulo);
+    font-size: 2em;
+}
+
+h2 {
+    color: var(--color-footer); 
+    text-align: right;
+    padding: 2em;
+    align-content: center;
+    font-family: var(--fuentetitulo);
+  
+}
+
+h2 {
+    transition-property: left;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    left: 0;
+}
+
+ h2:hover {
+     color:rgb(218, 164, 154);
+     left: 80%;
+     transition-duration: 2s;
+}
+
+h3 {
+    color: var(--color-atras);
+    font-family: var(--fuentenav);
+}
+
+/* #der {
+    
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 15%;
+}
+
+#izq {
+    
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 15%;
+   
+} */
+
+div > p {
+    text-align: center;
+    /* padding: 5%; */
+    color: var(--color-atras);
+    font-family: var(--fuenteparrafo);
+}
+
+/* p {
+    text-align: center;
+    margin: 0;
+    line-height: 2;
+           
+} */
+
+p#item-flex {
+    text-align: center;
+    margin: 5%;
+    padding: 1em;
+    text-overflow: ellipsis;
+}
+
+footer {
+   
+    background-color: var(--color-footer);
+    font-family: var(--fuenteparrafo);
+    padding: 0;
+    text-align: center;
+    
+}
+
+.footer {
+    margin-top: 1%;
+    align-content: center;
+}
+
+#footer {
+    padding: 0 0 2% 0;
+    margin: 0;
+    
+}
+
+#redsoc {
+    color: var(--color-atras);
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 760px) {
+    
+    .flexbox-index {
+        flex-flow: column;
+        align-items: center;
+      
+      }
+    
+      .flexbox-item {
+        width: 100%;
+        border-bottom: 5px var(--color-nav) solid;
+    }
+    
+      h2 {
+        text-align: center;
+      }
+
+     .grid-container {
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+         grid-row-gap: 10px;
+        
+        
+     }
+
+     .grid-item1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .grid-item2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .grid-item3 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .grid-item4 {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+      .grid-item5 {
+        grid-area: 5 / 1 / 6 / 2;
+      }
+      .grid-item6 {
+        grid-area: 6 / 1 / 7 / 2;
+      }
+    
+
+    }
+
+
+@media screen and (min-width: 761px) and (max-width: 1023px) {
+    
+}
